@@ -1,0 +1,34 @@
+
+
+<div class="marginTop" style="margin-bottom: 20px;height: 100%">
+  <div style="padding:20px;margin:15px; background-color:rgb(24, 33, 44);height:80%;border-radius:8px" class="">
+    <div class="form-group has-error has-feedback">
+      <label>Nuevo Helado</label>
+      <!-- <app-modal></app-modal> -->
+      <div class="form-group">
+
+        <label for="sabor" class="fontHelado inputHelado">Sabor</label>
+        <input type="text" maxlength="20" id="sabor" class="form-control" name="sabor" [(ngModel)]="formHelado.sabor"
+          placeholder="Sabor" #ctrl="ngModel">
+        <small id="emailHelpId" class="form-text text-muted"></small>
+
+        <label class="fontHelado inputHelado" for="tipo">Tipo</label>
+        <input type="text" maxlength="20" id="tipo" class="form-control" name="tipo" [(ngModel)]="this.formHelado.tipo"
+          placeholder="Tipo" #ctrl="ngModel">
+        <small id="claveHelpId" class="form-text text-muted"></small>
+
+        <label class="fontHelado inputHelado" for="kilos">Kilos</label>
+        <input type="text" maxlength="20" id="kilos" class="form-control" name="kilos" [(ngModel)]="this.formHelado.kilos"
+          placeholder="kgs" #ctrl="ngModel">
+        <small id="claveHelpId" class="form-text text-muted"></small>
+
+      </div>
+      <!-- <input type="email" class="form-control" placeholder="Email" name="email" required> -->
+      <div class="btn-group" style="width:100%;margin-top:5%" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-outline-warning" style="width:100%">Registrarse</button>
+        <button type="button" class="btn btn-outline-warning" (click)="showHelado()" style="width:100%">Login</button>
+      </div>
+    </div>
+
+  </div>
+</div>

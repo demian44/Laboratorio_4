@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+.fontHelado{
+    color:rgb(138, 217, 236);font-size:15px;font-family: Tahoma, Geneva, sans-serif;
+}
+.titleFont{
+    color:rgb(212, 212, 212);font-size:40px;font:bold;font-family: Tahoma, Geneva, sans-serif;
+    text-shadow: 15px;
+    margin-top:2%;
+}
+
+.imagenPrincipal {
+    /* background-image: url("./assets/imagen.jpg");
+    opacity: 1; */
+    background-color: rgb(68, 70, 88);
+    opacity: 0.95;
+    position: fixed;
+    z-index: -2;
+    top:-8%;
+    width: 104%;
+    height: 400%;
+    left:-2%;
+    padding:5%;
+   
+}
+
+.cardColor{
+    background-color:rgb(41, 36, 90);border-radius:8px;border:rgb(0, 0, 0) solid 2px;
+}
+
+.marginTop{
+    z-index:999;margin:80px 2% 0 2%
+}

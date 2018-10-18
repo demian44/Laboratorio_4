@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { MiHttpService } from './mi-http.service';
 
 import { Observable } from 'rxjs';
+import { catchError } from 'rxjs/Operators';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +12,7 @@ export class UserService {
 
   public listar(): Observable<any> {
     return this.miHttp.httpGetPromise("all", {})
-      .pipe(data => {        
+      .pipe(catchError(()=>"ASDJASDOPAS"), data => {        
         return data;
       });
   }

@@ -1,0 +1,10 @@
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary fontHelado" type="button"(click)="buscar()">Buscar</button>
+  </div>
+  <input type="text" class="form-control" maxlength="20" (keyup)="onKey($event)" [(ngModel)]="sabor" aria-describedby="basic-addon1">
+  <div class="input-group-prepend">
+    <span class="input-group-text" style="width:250px;background-color:white">Cantidad:{{cantidad}}</span>
+  </div>
+</div>

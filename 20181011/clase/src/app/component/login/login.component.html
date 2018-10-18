@@ -1,0 +1,14 @@
+<div class="input-group mb-3">
+
+  <input type="text" class="form-control" [(ngModel)]='email' aria-label="Text input with dropdown button">
+</div>
+
+<div class="input-group mb-3">
+
+  <input type="text" class="form-control" [(ngModel)]='password' aria-label="Text input with dropdown button">
+</div>
+
+<button class="btn btn-outline-success" style="width:100%" (click)="login()" type="button">Login</button>
+
+<input type="file" name="image" (change)="onFileSelected($event)">
+<button class="btn btn-outline-success" style="width:100%" (click)='uploadFile()' type="button">Login</button>

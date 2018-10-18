@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../service/user.service';
+import { catchError } from 'rxjs/Operators';
+import { Alert } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-user',
@@ -17,18 +19,23 @@ export class UserComponent implements OnInit {
     this.pass = "";
     this.userService.listar().subscribe(
       list => {
-        this.list = Object.create(list._body);
+        console.log(list._body);
+        this.list = JSON.parse(list._body);
         console.log(this.list);
-        for(let i=0;i<this.list.length;i++){
-          console.log(this.list[i]);
-         
+        
+        for (let i = 0; i < this.list.length; i++) {
+          console.log(this.list[i]["name"]);
+          console.log();
         }
+
+        // this.list = Object.create(list._body);
+        // console.log(this.list);
+        // // for(let i=0;i<this.list.length;i++){
+        //   console.log(this.list[i]);
+        // }
       }
     );
-
-
   }
-
 }
 
 

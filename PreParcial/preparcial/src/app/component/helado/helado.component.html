@@ -1,0 +1,25 @@
+<div class="marginTop" >
+  <app-mostrador-buscador [(helados)]="helados"></app-mostrador-buscador>
+  <table datatable="" dt-options="showCase.dtOptions" dt-column-defs="showCase.dtColumnDefs" class="fontHelado table row-border hover">
+    <thead>
+      <tr>
+        <th>Sabor</th>
+        <th>Tipo</th>
+        <th>Kilos</th>
+        <th>Foto</th>
+        <th>Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let helado of this.helados" style="vertical-align: bottom">
+        <td>{{helado.sabor}} </td>
+        <td>{{helado.tipo}} </td>
+        <td>{{helado.kilos}} </td>
+        <td> <img src='{{helado.foto}}' height="130px" width="130px" style="border-radius:80px"> </td>
+        <td>
+          <app-boton [buttonName]='buttonName' (borradoEvent)="seBorro($event)" [(id)]='helado.id'></app-boton>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
